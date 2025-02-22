@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    sops
+    age
     gnumake
     neovim
     lazygit
