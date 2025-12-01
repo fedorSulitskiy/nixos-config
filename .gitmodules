@@ -1,0 +1,3 @@
+[submodule "NeoVim-Setup"]
+	path = dotfiles/nvim
+	url = https://github.com/fedorSulitskiy/NeoVim-Setup.git
