@@ -11,6 +11,7 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = {
@@ -18,6 +19,7 @@
     nixpkgs,
     home-manager,
     zen-browser,
+    catppuccin,
   } @ inputs: {
     nixosConfigurations = {
       nixos-btw = nixpkgs.lib.nixosSystem {
@@ -61,6 +63,8 @@
           ./hosts/laptop/configuration.nix
           ./hosts/laptop/hardware-configuration.nix
 
+          catppuccin.nixosModules.catppuccin
+
           ({pkgs, ...}: {
             environment.systemPackages = [
               zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -77,6 +81,7 @@
               username = "fedor";
               homeDirectory = "/home/fedor";
               nvimSrc = ./dotfiles/nvim;
+              catppuccin = catppuccin.homeModules.catppuccin;
             };
 
             # Root user configuration
@@ -84,6 +89,7 @@
               username = "root";
               homeDirectory = "/root";
               nvimSrc = ./dotfiles/nvim;
+              catppuccin = catppuccin.homeModules.catppuccin;
             };
           }
         ];

@@ -2,10 +2,11 @@
   username,
   homeDirectory,
   nvimSrc,
-}: {lib, ...}: {
+  catppuccin,
+}: {...}: {
   _module.args = {inherit nvimSrc;};
 
-  imports = import ../../homeModules;
+  imports = import ../../homeModules ++ [catppuccin];
 
   withZoom.enable = true;
   withYaak.enable = true;
@@ -23,4 +24,18 @@
   home.username = username;
   home.homeDirectory = homeDirectory;
   home.stateVersion = "25.05";
+
+  catppuccin.fcitx5 = {
+    enable = true;
+    apply = true;
+    enableRounded = true;
+    flavor = "mocha";
+    accent = "mauve";
+  };
+
+  catppuccin.cursors = {
+    enable = true;
+    flavor = "mocha";
+    accent = "dark";
+  };
 }
