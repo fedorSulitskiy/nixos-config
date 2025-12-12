@@ -36,6 +36,20 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # 2. Enable CUPS and add Samsung + common drivers
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      samsung-unified-linux-driver_1_00_36 # Samsung’s own driver
+      gutenprint # PCL/PS fallback
+    ];
+  };
+
+  # 3. (optional) if you also want to scan
+  hardware.sane.enable = true;
+
+  # 4. (optional) open firewall so the CUPS web interface is reachable
+  networking.firewall.allowedTCPPorts = [631];
 
   environment.etc."xdg/autostart/klipper-autostart.desktop".enable = false;
 
