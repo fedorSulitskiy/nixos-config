@@ -17,6 +17,7 @@
   withVscode.enable = true;
   withDiscord.enable = true;
   withSpotify.enable = true;
+  withFirefox.enable = true;
   withObsidian.enable = true;
   withWebTorrent.enable = true;
   withDragonPlayer.enable = true;
