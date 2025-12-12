@@ -6,13 +6,13 @@
 }: {
   home.packages = with pkgs; [
     tree
-    neofetch
+    fastfetch
   ];
 
   programs.bash = {
     enable = true;
     initExtra = ''
-      neofetch
+      fastfetch
     '';
   };
 }
