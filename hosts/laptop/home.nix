@@ -7,6 +7,7 @@
 
   imports = import ../../homeModules;
 
+  withZoom.enable = true;
   withYaak.enable = true;
   withHttpie.enable = true;
   withProton.enable = true;
@@ -15,6 +16,8 @@
   withDiscord.enable = true;
   withSpotify.enable = true;
   withObsidian.enable = true;
+  withWebTorrent.enable = true;
+  withDragonPlayer.enable = true;
   withGitHubDesktop.enable = true;
 
   home.username = username;

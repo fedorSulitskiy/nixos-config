@@ -7,6 +7,8 @@
   ./cli/oh-my-posh.nix
 
   ./programs/yaak.nix
+  ./programs/zoom.nix
+  ./programs/web-torrent.nix
   ./programs/github-desktop.nix
   ./programs/obsidian.nix
   ./programs/proton.nix
@@ -16,4 +18,5 @@
   ./programs/obs-studio.nix
   ./programs/httpie.nix
   ./programs/discord.nix
+  ./programs/dragon.nix
 ]
