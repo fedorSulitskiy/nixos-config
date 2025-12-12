@@ -23,7 +23,7 @@
 
   home.username = username;
   home.homeDirectory = homeDirectory;
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
 
   catppuccin.fcitx5 = {
     enable = true;
