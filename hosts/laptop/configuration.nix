@@ -28,6 +28,8 @@
     "flakes"
   ];
 
+  programs.firefox.enable = true;
+
   nixpkgs.config.allowUnfree = true;
 
   # Use the systemd-boot EFI boot loader.
