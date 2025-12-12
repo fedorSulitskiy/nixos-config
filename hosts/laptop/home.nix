@@ -10,6 +10,7 @@
 
   withZoom.enable = true;
   withYaak.enable = true;
+  withSlack.enable = true;
   withHttpie.enable = true;
   withProton.enable = true;
   withSignal.enable = true;
