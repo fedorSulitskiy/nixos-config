@@ -27,6 +27,7 @@
       fcitx5-nord
       fcitx5-rime
       rime-data # Essential: provides the dictionary files
+      catppuccin-fcitx5
     ];
   };
 

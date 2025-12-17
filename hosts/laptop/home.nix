@@ -27,14 +27,6 @@
   home.homeDirectory = homeDirectory;
   home.stateVersion = "25.11";
 
-  catppuccin.fcitx5 = {
-    enable = true;
-    apply = true;
-    enableRounded = true;
-    flavor = "mocha";
-    accent = "mauve";
-  };
-
   catppuccin.cursors = {
     enable = true;
     flavor = "mocha";
