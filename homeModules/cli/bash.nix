@@ -12,7 +12,7 @@
   programs.bash = {
     enable = true;
     initExtra = ''
-      fastfetch
+      fastfetch -c examples/27.jsonc
     '';
   };
 }
