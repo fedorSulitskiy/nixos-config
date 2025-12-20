@@ -11,6 +11,7 @@
     ./visuals/graphics.nix
 
     ./networking/networking.nix
+    ./networking/bluetooth.nix
 
     ./locale/language.nix
     ./locale/timezone.nix
