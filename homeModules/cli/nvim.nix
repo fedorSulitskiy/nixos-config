@@ -27,6 +27,9 @@
     stylua
     luarocks
     lua-language-server
+    vimPlugins.none-ls-nvim
+    gofumpt
+    goimports-reviser
   ];
 
   # copy the same nvim config
