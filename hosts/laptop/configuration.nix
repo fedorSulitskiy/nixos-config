@@ -19,7 +19,7 @@
   withNode.enable = true;
   withRedis.enable = true;
   withPython.enable = true;
-  withPostgres.enable = true;
+  withPostgres16.enable = true;
   withGoMigrate.enable = true;
   withNixSupport.enable = true;
 

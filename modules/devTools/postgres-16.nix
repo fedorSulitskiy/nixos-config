@@ -5,14 +5,15 @@
   ...
 }: {
   options = {
-    withPostgres.enable =
-      lib.mkEnableOption "enables PostgreSQL on this machine";
+    withPostgres16.enable =
+      lib.mkEnableOption "enables PostgreSQL 16.11 on this machine";
   };
 
-  config = lib.mkIf config.withPostgres.enable {
+  config = lib.mkIf config.withPostgres16.enable {
     environment.systemPackages = with pkgs; [
       postgresql_16
       postgresql16Packages.pgvector
+      postgresql16Packages.pgsql-http
     ];
 
     services.postgresql = {
@@ -27,7 +28,7 @@
       settings = {
         listen_addresses = "localhost";
       };
-      extensions = with pkgs.postgresql_16.pkgs; [pgvector];
+      extensions = with pkgs.postgresql_16.pkgs; [pgvector pgsql-http];
       package = pkgs.postgresql_16;
     };
   };

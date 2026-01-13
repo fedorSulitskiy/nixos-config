@@ -1,6 +1,7 @@
 [
   ./devTools/python.nix
-  ./devTools/postgres.nix
+  ./devTools/postgres-16.nix
+  ./devTools/postgres-17.nix
   ./devTools/redis.nix
   ./devTools/migrate.nix
   ./devTools/go.nix
