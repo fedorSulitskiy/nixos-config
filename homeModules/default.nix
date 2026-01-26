@@ -7,6 +7,7 @@
   ./cli/oh-my-posh.nix
 
   ./programs/slack.nix
+  ./programs/ente.nix
   ./programs/firefox.nix
   ./programs/yaak.nix
   ./programs/zoom.nix

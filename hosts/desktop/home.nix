@@ -2,15 +2,14 @@
   username,
   homeDirectory,
   nvimSrc,
-}: {
-  ...
-}: {
+}: {...}: {
   _module.args = {inherit nvimSrc;};
 
-  imports = (import ../../homeModules);
+  imports = import ../../homeModules;
 
   withOBS.enable = true;
   withYaak.enable = true;
+  withEnte.enable = true;
   withHttpie.enable = true;
   withSteam.enable = true;
   withProton.enable = true;
