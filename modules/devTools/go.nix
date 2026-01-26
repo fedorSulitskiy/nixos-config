@@ -15,6 +15,7 @@
       richgo
       gopls
       gotools
+      go-swag
     ];
   };
 }
