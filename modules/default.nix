@@ -9,6 +9,7 @@
   ./devTools/fly.nix
   ./devTools/nix.nix
   ./devTools/node.nix
+  ./devTools/ffmpeg.nix
 
   ./qol/yazi.nix
 ]
