@@ -30,6 +30,7 @@
     vimPlugins.none-ls-nvim
     gofumpt
     goimports-reviser
+    terraform-ls
   ];
 
   # copy the same nvim config
