@@ -1,7 +1,3 @@
-[submodule "NeoVim-Setup"]
-	path = dotfiles/nvim
-	url = https://github.com/fedorSulitskiy/NeoVim-Setup.git
-    ignore = dirty
 [submodule "dotfiles/nvim"]
 	path = dotfiles/nvim
 	url = https://github.com/fedorSulitskiy/neovim-config.git
