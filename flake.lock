@@ -39,6 +39,22 @@
         "type": "github"
       }
     },
+    "neovim-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1769768855,
+        "narHash": "sha256-pKj+zCMj5nirVUUEE/E7gCHrAwbAbzlLljgv/bkFeBw=",
+        "owner": "fedorSulitskiy",
+        "repo": "neovim-config",
+        "rev": "92a54a7543e2ba508bafbbb4b5ef134c719b8aa7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fedorSulitskiy",
+        "repo": "neovim-config",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1769018530,
@@ -75,6 +91,7 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
+        "neovim-config": "neovim-config",
         "nixpkgs": "nixpkgs_2",
         "zen-browser": "zen-browser"
       }

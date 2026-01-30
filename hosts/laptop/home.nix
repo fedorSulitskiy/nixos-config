@@ -1,12 +1,17 @@
 {
   username,
   homeDirectory,
-  nvimSrc,
+  nvimLocalSrc,
+  nvimGithubSrc,
   catppuccin,
 }: {...}: {
-  _module.args = {inherit nvimSrc;};
-
   imports = import ../../homeModules ++ [catppuccin];
+
+  # Nvim config: set useLocal = true for local dev (requires --impure)
+  #              set useLocal = false for pure GitHub builds
+  nvim.localSrc = nvimLocalSrc;
+  nvim.githubSrc = nvimGithubSrc;
+  nvim.useLocal = true;
 
   withZoom.enable = true;
   withYaak.enable = true;

@@ -12,6 +12,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
+
+    # GitHub source for neovim config (pure builds)
+    neovim-config = {
+      url = "github:fedorSulitskiy/neovim-config";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -20,7 +26,12 @@
     home-manager,
     zen-browser,
     catppuccin,
-  } @ inputs: {
+    neovim-config,
+  } @ inputs: let
+    # Nvim config sources - both are always available
+    nvimLocalSrc = /home/fedor/nixos-config/dotfiles/nvim;
+    nvimGithubSrc = neovim-config;
+  in {
     nixosConfigurations = {
       nixos-btw = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -44,14 +55,14 @@
             home-manager.users.fedor = import ./hosts/desktop/home.nix {
               username = "fedor";
               homeDirectory = "/home/fedor";
-              nvimSrc = ./dotfiles/nvim;
+              inherit nvimLocalSrc nvimGithubSrc;
             };
 
             # Root user configuration
             home-manager.users.root = import ./hosts/desktop/home.nix {
               username = "root";
               homeDirectory = "/root";
-              nvimSrc = ./dotfiles/nvim;
+              inherit nvimLocalSrc nvimGithubSrc;
             };
           }
         ];
@@ -80,7 +91,7 @@
             home-manager.users.fedor = import ./hosts/laptop/home.nix {
               username = "fedor";
               homeDirectory = "/home/fedor";
-              nvimSrc = ./dotfiles/nvim;
+              inherit nvimLocalSrc nvimGithubSrc;
               catppuccin = catppuccin.homeModules.catppuccin;
             };
 
@@ -88,7 +99,7 @@
             home-manager.users.root = import ./hosts/laptop/home.nix {
               username = "root";
               homeDirectory = "/root";
-              nvimSrc = ./dotfiles/nvim;
+              inherit nvimLocalSrc nvimGithubSrc;
               catppuccin = catppuccin.homeModules.catppuccin;
             };
           }

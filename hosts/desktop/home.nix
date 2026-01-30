@@ -1,11 +1,16 @@
 {
   username,
   homeDirectory,
-  nvimSrc,
+  nvimLocalSrc,
+  nvimGithubSrc,
 }: {...}: {
-  _module.args = {inherit nvimSrc;};
-
   imports = import ../../homeModules;
+
+  # Nvim config: set useLocal = true for local dev (requires --impure)
+  #              set useLocal = false for pure GitHub builds
+  nvim.localSrc = nvimLocalSrc;
+  nvim.githubSrc = nvimGithubSrc;
+  nvim.useLocal = true;
 
   withOBS.enable = true;
   withYaak.enable = true;
