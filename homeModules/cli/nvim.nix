@@ -38,6 +38,8 @@
       fd
       ripgrep
       cargo
+      just
+      just-lsp
       gnumake
       gcc
       tree-sitter
