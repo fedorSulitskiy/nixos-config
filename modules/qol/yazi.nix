@@ -12,6 +12,7 @@
   config = lib.mkIf config.withYazi.enable {
     environment.systemPackages = with pkgs; [
       yazi
+      zoxide
     ];
   };
 }
