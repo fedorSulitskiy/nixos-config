@@ -9,6 +9,8 @@
     powerOnBoot = true;
     settings = {
       General = {
+        Name = "Computer";
+        ControllerMode = "dual";
         # Shows battery charge of connected devices on supported
         # Bluetooth adapters. Defaults to 'false'.
         Experimental = true;
@@ -23,6 +25,7 @@
         # in later on. Defaults to 'true'.
         AutoEnable = true;
       };
+      LE = {EnableAdvMonInterleaveScan = "true";};
     };
   };
 }
