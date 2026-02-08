@@ -1,9 +1,11 @@
 {inputs, ...}: {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./system/system.nix
-  ] ++ (import ../../modules);
+  imports =
+    [
+      # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+      ./system/system.nix
+    ]
+    ++ (import ../../modules);
 
   withYazi.enable = true;
   withGo.enable = true;
@@ -29,6 +31,12 @@
   };
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+
+  fileSystems."/mnt/ssd" = {
+    device = "/dev/disk/by-uuid/f0796dfd-71d8-4091-9369-305803cac7cd";
+    fsType = "ext4";
+    options = ["defaults"];
+  };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
