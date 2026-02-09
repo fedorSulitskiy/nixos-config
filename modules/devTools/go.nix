@@ -17,6 +17,7 @@
       gotools
       gotestsum
       go-swag
+      delve
     ];
   };
 }
