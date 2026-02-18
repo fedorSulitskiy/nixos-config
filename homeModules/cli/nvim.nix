@@ -56,6 +56,8 @@
       gofumpt
       goimports-reviser
       terraform-ls
+      opencode
+      lsof
     ];
 
     # copy the same nvim config
