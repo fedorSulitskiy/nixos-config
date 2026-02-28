@@ -13,9 +13,9 @@
     environment.systemPackages = with pkgs; [
       uv
       poetry
-      python312
-      python312Packages.pip
-      python312Packages.pynvim
+      # python312
+      # python312Packages.pip
+      # python312Packages.pynvim
       python313
       python313Packages.jedi-language-server
       python314
