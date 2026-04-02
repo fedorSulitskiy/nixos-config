@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./visuals/desktop.nix
     ./visuals/monitors.nix
@@ -12,6 +13,7 @@
     ./visuals/graphics.nix
 
     ./networking/networking.nix
+    ./networking/wireguard.nix
 
     ./locale/language.nix
     ./locale/timezone.nix
