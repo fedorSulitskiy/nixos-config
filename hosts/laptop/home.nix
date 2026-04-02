@@ -14,7 +14,6 @@
   nvim.useLocal = true;
 
   withZoom.enable = true;
-  withYaak.enable = true;
   withSlack.enable = true;
   withHttpie.enable = true;
   withProton.enable = true;
@@ -26,7 +25,6 @@
   withObsidian.enable = true;
   withWebTorrent.enable = true;
   withDragonPlayer.enable = true;
-  withGitHubDesktop.enable = true;
 
   home.username = username;
   home.homeDirectory = homeDirectory;

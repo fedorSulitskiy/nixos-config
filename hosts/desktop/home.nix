@@ -12,8 +12,6 @@
   nvim.githubSrc = nvimGithubSrc;
   nvim.useLocal = true;
 
-  withOBS.enable = true;
-  withYaak.enable = true;
   withEnte.enable = true;
   withHttpie.enable = true;
   withSteam.enable = true;
@@ -22,8 +20,8 @@
   withVscode.enable = true;
   withDiscord.enable = true;
   withSpotify.enable = true;
+  withPosting.enable = true;
   withObsidian.enable = true;
-  withGitHubDesktop.enable = true;
 
   home.username = username;
   home.homeDirectory = homeDirectory;
