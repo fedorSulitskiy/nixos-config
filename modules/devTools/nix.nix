@@ -12,7 +12,7 @@
   config = lib.mkIf config.withNixSupport.enable {
     environment.systemPackages = with pkgs; [
       nixd
-      nixfmt-rfc-style
+      nixfmt
     ];
   };
 }

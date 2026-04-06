@@ -12,7 +12,7 @@
   config = lib.mkIf config.withProton.enable {
     home.packages = with pkgs; [
       proton-pass
-      protonvpn-gui
+      proton-vpn
       protonmail-desktop
     ];
   };
