@@ -9,6 +9,7 @@
 
   withYazi.enable = true;
   withGo.enable = true;
+  withJq.enable = true;
   withGit.enable = true;
   withFly.enable = true;
   withNode.enable = true;
