@@ -12,6 +12,7 @@
 
     ./networking/networking.nix
     ./networking/bluetooth.nix
+    ./networking/wireguard.nix
 
     ./locale/language.nix
     ./locale/timezone.nix
