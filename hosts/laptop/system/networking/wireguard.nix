@@ -10,7 +10,7 @@
   #
   # I saved the private key in /etc/wireguard/private.key
   networking.wireguard.interfaces.wg0 = {
-    ips = ["10.0.2.2/24"];
+    ips = ["10.0.2.3/24"];
     privateKeyFile = "/etc/wireguard/private.key";
 
     peers = [
