@@ -11,6 +11,11 @@ impure-rebuild-switch:
 pure-rebuild-switch:
 	@sudo nixos-rebuild switch
 
+# List the last 5 generations
+[group("Build")]
+list-generations:
+    @sudo nixos-rebuild list-generations | head -5
+
 # Delete all the garbage
 [group("Nix-ops")]
 clean-garbage:
