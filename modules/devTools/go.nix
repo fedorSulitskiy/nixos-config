@@ -16,6 +16,7 @@
       gopls
       gotools
       gotestsum
+      tparse
       go-swag
       delve
     ];
