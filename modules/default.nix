@@ -13,4 +13,12 @@
   ./devTools/ffmpeg.nix
 
   ./qol/yazi.nix
+
+  ./monitoring/options.nix
+  ./monitoring/alloy-config.nix
+  ./monitoring/grafana.nix
+  ./monitoring/prometheus.nix
+  ./monitoring/exporter-http-api.nix
+  ./monitoring/loki-server.nix
+  ./monitoring/tempo-server.nix
 ]
