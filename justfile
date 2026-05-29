@@ -19,7 +19,8 @@ list-generations:
 # Delete all the garbage
 [group("Nix-ops")]
 clean-garbage:
-	@nix-collect-garbage
+    @sudo nix-env --delete-generations +5 --profile /nix/var/nix/profiles/system
+    @nix-collect-garbage
 
 # Update nix flake
 [group("Nix-ops")]
