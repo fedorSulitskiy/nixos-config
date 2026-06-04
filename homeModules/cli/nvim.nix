@@ -58,6 +58,7 @@
       terraform-ls
       opencode
       lsof
+      yamlfmt
     ];
 
     # copy the same nvim config
