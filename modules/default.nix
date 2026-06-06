@@ -5,6 +5,7 @@
   ./devTools/redis.nix
   ./devTools/migrate.nix
   ./devTools/go.nix
+  ./devTools/gcloud.nix
   ./devTools/jq.nix
   ./devTools/git.nix
   ./devTools/fly.nix
