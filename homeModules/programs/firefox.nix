@@ -12,13 +12,13 @@
   config = lib.mkIf config.withFirefox.enable {
     home.packages = with pkgs; [
       firefox
-      firefoxpwa
+      # firefoxpwa
     ];
 
     programs.firefox = {
       enable = true;
       package = pkgs.firefox;
-      nativeMessagingHosts = [pkgs.firefoxpwa];
+      # nativeMessagingHosts = [pkgs.firefoxpwa];
       configPath = "${config.xdg.configHome}/mozilla/firefox";
     };
   };
