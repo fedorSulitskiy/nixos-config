@@ -25,6 +25,7 @@
   withObsidian.enable = true;
   withWebTorrent.enable = true;
   withDragonPlayer.enable = true;
+  withYaak.enable = true;
 
   home.username = username;
   home.homeDirectory = homeDirectory;

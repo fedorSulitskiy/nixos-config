@@ -20,4 +20,5 @@
   ./programs/httpie.nix
   ./programs/discord.nix
   ./programs/dragon.nix
+  ./programs/yaak.nix
 ]

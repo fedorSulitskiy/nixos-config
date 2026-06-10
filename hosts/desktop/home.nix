@@ -22,6 +22,7 @@
   withSpotify.enable = true;
   withPosting.enable = true;
   withObsidian.enable = true;
+  withYaak.enable = true;
 
   home.username = username;
   home.homeDirectory = homeDirectory;
