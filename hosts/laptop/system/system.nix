@@ -14,6 +14,7 @@
     ./networking/bluetooth.nix
     ./networking/wireguard.nix
 
+    ./locale/spell-checking.nix
     ./locale/language.nix
     ./locale/timezone.nix
 
