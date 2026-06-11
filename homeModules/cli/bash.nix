@@ -3,6 +3,8 @@
     tree
     fastfetch
     fzf
+    lsd
+    bat
   ];
 
   programs.bash = {
@@ -10,6 +12,11 @@
     initExtra = ''
       fastfetch -c examples/27.jsonc
     '';
+    shellAliases = {
+      ll = "ls -Alh";
+      ls = "lsd --group-dirs first";
+      cat = "bat";
+    };
   };
   programs.zoxide = {
     enable = true;
