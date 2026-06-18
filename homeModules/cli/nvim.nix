@@ -59,6 +59,7 @@
       opencode
       lsof
       yamlfmt
+      deno
     ];
 
     # copy the same nvim config
