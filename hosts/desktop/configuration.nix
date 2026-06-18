@@ -15,6 +15,7 @@
   withNode.enable = true;
   withRedis.enable = true;
   withPython.enable = true;
+  withOllama.enable = true;
   withRabbitMQ.enable = true;
   withPostgres17.enable = true;
   withGoMigrate.enable = true;
