@@ -11,6 +11,7 @@
   ./devTools/fly.nix
   ./devTools/nix.nix
   ./devTools/node.nix
+  ./devTools/rabbit-mq.nix
   ./devTools/ffmpeg.nix
 
   ./qol/yazi.nix
