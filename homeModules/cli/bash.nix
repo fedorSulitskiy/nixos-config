@@ -16,6 +16,7 @@
       ll = "ls -Alh";
       ls = "lsd --group-dirs first";
       cat = "bat";
+      work = "uvx --from git+https://github.com/emson/pymodoro.git pymodoro";
     };
   };
   programs.zoxide = {
