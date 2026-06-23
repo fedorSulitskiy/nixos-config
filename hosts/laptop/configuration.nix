@@ -20,6 +20,7 @@
   withRedis.enable = true;
   withPython.enable = true;
   withGcloud.enable = true;
+  withRabbitMQ.enable = true;
   withPostgres16.enable = true;
   withGoMigrate.enable = true;
   withNixSupport.enable = true;
