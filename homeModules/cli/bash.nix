@@ -18,6 +18,7 @@
       cat = "bat";
       work = "uvx --from git+https://github.com/emson/pymodoro.git pymodoro";
       oc = "opencode";
+      gg = "lazygit";
     };
   };
   programs.zoxide = {
