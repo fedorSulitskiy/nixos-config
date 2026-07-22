@@ -19,6 +19,7 @@
   withNode.enable = true;
   withRedis.enable = true;
   withPython.enable = true;
+  withOllama.enable = true;
   withGcloud.enable = true;
   withRabbitMQ.enable = true;
   withPostgres16.enable = true;
