@@ -45,10 +45,10 @@
   makeWrapper,
   librsvg,
 }: let
-  version = "2026.4.0";
+  version = "2026.5.0";
   src = fetchurl {
     url = "https://yaak.app/releases/v${version}/deb-x86_64/yaak_${version}_amd64.deb";
-    sha256 = "sha256-lrdG12/d1j5o/mo04A+5SD70hcxvaoyJResWuZ4Afzk=";
+    sha256 = "sha256-OEUnBpBO1HI7Hg7R9T3d3ewtev0Yr5innkTyO9RZJk0=";
   };
 
   buildInputs = [
