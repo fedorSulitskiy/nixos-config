@@ -24,11 +24,6 @@
         # Distributor configuration - receives traces from Alloy
         # Note: OTLP ports changed to avoid conflict with Alloy's OTLP receiver
         distributor = {
-          ring = {
-            kvstore = {
-              store = "inmemory";
-            };
-          };
           receivers = {
             otlp = {
               protocols = {
@@ -43,31 +38,6 @@
           };
         };
 
-        # Ingester configuration - writes traces to storage
-        ingester = {
-          lifecycler = {
-            address = "127.0.0.1";
-            ring = {
-              kvstore = {
-                store = "inmemory";
-              };
-              replication_factor = 1;
-            };
-            final_sleep = "0s";
-          };
-          trace_idle_period = "10s";
-          max_block_bytes = 1048576;
-          max_block_duration = "5m";
-        };
-
-        # Compactor configuration
-        compactor = {
-          compaction = {
-            block_retention = "168h";
-            compacted_block_retention = "1h";
-          };
-        };
-
         # Storage configuration - local filesystem
         storage = {
           trace = {
@@ -79,6 +49,16 @@
               path = "/var/lib/tempo/wal";
             };
           };
+        };
+
+        # Live-store: holds recent traces in memory, flushes to local WAL.
+        # v3 defaults point at /var/tempo/... which is outside the service's
+        # writable paths (ProtectSystem=strict) — must live under /var/lib/tempo.
+        live_store = {
+          wal = {
+            path = "/var/lib/tempo/live-store/traces";
+          };
+          shutdown_marker_dir = "/var/lib/tempo/live-store/shutdown-marker";
         };
 
         # Query frontend configuration
@@ -98,18 +78,6 @@
             ];
           };
 
-          # Traces storage for local-blocks processor
-          traces_storage = {
-            path = "/var/lib/tempo/generator/traces";
-          };
-
-          # local-blocks processor config
-          processor = {
-            local_blocks = {
-              filter_server_spans = false;
-            };
-          };
-
           # Ring configuration for single-node setup
           ring = {
             kvstore = {
@@ -122,7 +90,7 @@
         overrides = {
           defaults = {
             metrics_generator = {
-              processors = ["service-graphs" "span-metrics" "local-blocks"];
+              processors = ["service-graphs" "span-metrics"];
             };
           };
         };
@@ -136,7 +104,9 @@
       "d /var/lib/tempo/wal 0750 tempo tempo -"
       "d /var/lib/tempo/generator 0750 tempo tempo -"
       "d /var/lib/tempo/generator/wal 0750 tempo tempo -"
-      "d /var/lib/tempo/generator/traces 0750 tempo tempo -"
+      "d /var/lib/tempo/live-store 0750 tempo tempo -"
+      "d /var/lib/tempo/live-store/traces 0750 tempo tempo -"
+      "d /var/lib/tempo/live-store/shutdown-marker 0750 tempo tempo -"
     ];
   };
 }
