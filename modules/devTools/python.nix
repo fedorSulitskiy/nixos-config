@@ -12,7 +12,6 @@
   config = lib.mkIf config.withPython.enable {
     environment.systemPackages = with pkgs; [
       uv
-      poetry
       # python312
       # python312Packages.pip
       # python312Packages.pynvim
