@@ -96,17 +96,5 @@
         };
       };
     };
-
-    # Ensure data directories exist
-    systemd.tmpfiles.rules = [
-      "d /var/lib/tempo 0750 tempo tempo -"
-      "d /var/lib/tempo/traces 0750 tempo tempo -"
-      "d /var/lib/tempo/wal 0750 tempo tempo -"
-      "d /var/lib/tempo/generator 0750 tempo tempo -"
-      "d /var/lib/tempo/generator/wal 0750 tempo tempo -"
-      "d /var/lib/tempo/live-store 0750 tempo tempo -"
-      "d /var/lib/tempo/live-store/traces 0750 tempo tempo -"
-      "d /var/lib/tempo/live-store/shutdown-marker 0750 tempo tempo -"
-    ];
   };
 }
