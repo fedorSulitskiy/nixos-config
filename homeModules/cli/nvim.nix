@@ -56,7 +56,7 @@
       gofumpt
       goimports-reviser
       terraform-ls
-      opencode
+      # opencode
       lsof
       yamlfmt
       deno

@@ -12,6 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix/release-26.05";
+    opencode-flake.url = "github:Hy4ri/opencode-flake";
 
     # GitHub source for neovim config (pure builds)
     neovim-config = {
@@ -27,6 +28,7 @@
     zen-browser,
     catppuccin,
     neovim-config,
+    opencode-flake,
   } @ inputs: let
     # Nvim config sources - both are always available
     nvimLocalSrc = /home/fedor/nixos-config/dotfiles/nvim;
@@ -43,6 +45,7 @@
           ({pkgs, ...}: {
             environment.systemPackages = [
               zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+              opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.opencode
             ];
           })
 
