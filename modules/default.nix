@@ -14,6 +14,7 @@
   ./devTools/ollama.nix
   ./devTools/rabbit-mq.nix
   ./devTools/ffmpeg.nix
+  ./devTools/pdf.nix
 
   ./qol/yazi.nix
   ./qol/qtile-fix.nix

@@ -17,6 +17,7 @@
   withPython.enable = true;
   withOllama.enable = true;
   withOllama.cuda = true;
+  withPdfTopPm.enable = true;
   withRabbitMQ.enable = true;
   withPostgres17.enable = true;
   withGoMigrate.enable = true;
