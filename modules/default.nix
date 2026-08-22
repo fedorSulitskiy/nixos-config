@@ -3,6 +3,7 @@
   ./devTools/postgres-16.nix
   ./devTools/postgres-17.nix
   ./devTools/redis.nix
+  ./devTools/chrome.nix
   ./devTools/migrate.nix
   ./devTools/go.nix
   ./devTools/gcloud.nix

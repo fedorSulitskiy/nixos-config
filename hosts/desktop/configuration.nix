@@ -14,6 +14,7 @@
   withFly.enable = true;
   withNode.enable = true;
   withRedis.enable = true;
+  withChrome.enable = true;
   withPython.enable = true;
   withOllama.enable = true;
   withOllama.cuda = true;
