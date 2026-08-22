@@ -16,6 +16,7 @@
   ./devTools/ffmpeg.nix
 
   ./qol/yazi.nix
+  ./qol/qtile-fix.nix
 
   ./monitoring/options.nix
   ./monitoring/alloy-config.nix
