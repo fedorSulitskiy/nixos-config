@@ -10,11 +10,6 @@
   };
 
   config = lib.mkIf config.withFirefox.enable {
-    home.packages = with pkgs; [
-      firefox
-      # firefoxpwa
-    ];
-
     programs.firefox = {
       enable = true;
       package = pkgs.firefox;
