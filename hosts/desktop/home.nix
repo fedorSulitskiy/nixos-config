@@ -12,8 +12,6 @@
   nvim.githubSrc = nvimGithubSrc;
   nvim.useLocal = true;
 
-  withEnte.enable = true;
-  withHttpie.enable = true;
   withSteam.enable = true;
   withProton.enable = true;
   withSignal.enable = true;
