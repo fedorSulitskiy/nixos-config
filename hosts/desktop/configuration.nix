@@ -23,6 +23,7 @@
   withPostgres17.enable = true;
   withGoMigrate.enable = true;
   withNixSupport.enable = true;
+  withGcloud.enable = true;
 
   # Monitoring suite
   monitoring = {
