@@ -11,8 +11,9 @@
 
   config = lib.mkIf config.withGcloud.enable {
     environment.systemPackages = with pkgs; [
-      google-cloud-sdk
+      (google-cloud-sdk.withExtraComponents [
+        google-cloud-sdk.components.app-engine-go
+      ])
     ];
   };
 }
-
