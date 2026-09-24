@@ -13,7 +13,6 @@
   nvim.githubSrc = nvimGithubSrc;
   nvim.useLocal = true;
 
-  withVoov.enable = true;
   withZoom.enable = true;
   withSlack.enable = true;
   withProton.enable = true;
@@ -22,6 +21,7 @@
   withDiscord.enable = true;
   withSpotify.enable = true;
   withObsidian.enable = true;
+  withLocalSend.enable = true;
   withWebTorrent.enable = true;
   withDragonPlayer.enable = true;
   withYaak.enable = true;
