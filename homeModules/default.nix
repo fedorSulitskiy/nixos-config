@@ -6,6 +6,7 @@
   ./cli/ghostty.nix
   ./cli/oh-my-posh.nix
 
+  ./programs/voov.nix
   ./programs/slack.nix
   ./programs/posting.nix
   ./programs/ente.nix
