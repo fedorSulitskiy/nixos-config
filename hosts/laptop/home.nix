@@ -13,6 +13,7 @@
   nvim.githubSrc = nvimGithubSrc;
   nvim.useLocal = true;
 
+  withVoov.enable = true;
   withZoom.enable = true;
   withSlack.enable = true;
   withHttpie.enable = true;
