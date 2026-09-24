@@ -16,13 +16,11 @@
   withVoov.enable = true;
   withZoom.enable = true;
   withSlack.enable = true;
-  withHttpie.enable = true;
   withProton.enable = true;
   withSignal.enable = true;
   withVscode.enable = true;
   withDiscord.enable = true;
   withSpotify.enable = true;
-  withFirefox.enable = true;
   withObsidian.enable = true;
   withWebTorrent.enable = true;
   withDragonPlayer.enable = true;
