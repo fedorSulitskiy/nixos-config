@@ -57,6 +57,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
 
             # Fedor user configuration
             home-manager.users.fedor = import ./hosts/desktop/home.nix {
