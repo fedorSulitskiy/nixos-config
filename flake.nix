@@ -13,6 +13,7 @@
     };
     catppuccin.url = "github:catppuccin/nix/release-26.05";
     opencode-flake.url = "github:Hy4ri/opencode-flake";
+    flyline.url = "github:HalFrgrd/flyline";
 
     # GitHub source for neovim config (pure builds)
     neovim-config = {
@@ -29,6 +30,7 @@
     catppuccin,
     neovim-config,
     opencode-flake,
+    flyline,
   } @ inputs: let
     # Nvim config sources - both are always available
     nvimLocalSrc = /home/fedor/nixos-config/dotfiles/nvim;
@@ -41,6 +43,8 @@
         modules = [
           ./hosts/desktop/configuration.nix
           ./hosts/desktop/hardware-configuration.nix
+
+          flyline.nixosModules.default
 
           ({pkgs, ...}: {
             environment.systemPackages = [
@@ -78,6 +82,7 @@
           ./hosts/laptop/hardware-configuration.nix
 
           catppuccin.nixosModules.catppuccin
+          flyline.nixosModules.default
 
           ({pkgs, ...}: {
             environment.systemPackages = [

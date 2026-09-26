@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home.packages = with pkgs; [
     tree
     fastfetch
@@ -9,7 +13,7 @@
 
   programs.bash = {
     enable = true;
-    initExtra = ''
+    bashrcExtra = ''
       fastfetch -c examples/27.jsonc
     '';
     shellAliases = {

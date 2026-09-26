@@ -26,6 +26,8 @@
   withGoMigrate.enable = true;
   withNixSupport.enable = true;
 
+  programs.flyline.enable = true;
+
   # Monitoring suite
   monitoring = {
     grafana = {
