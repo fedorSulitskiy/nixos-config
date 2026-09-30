@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   ...
 }: {
   home.packages = with pkgs; [
@@ -13,6 +12,9 @@
 
   programs.bash = {
     enable = true;
+    initExtra = ''
+      flyline mouse --mode disabled
+    '';
     bashrcExtra = ''
       fastfetch -c examples/27.jsonc
     '';
