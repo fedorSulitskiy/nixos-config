@@ -12,15 +12,13 @@
   nvim.githubSrc = nvimGithubSrc;
   nvim.useLocal = true;
 
-  withSteam.enable = true;
+  withYaak.enable = true;
   withProton.enable = true;
   withSignal.enable = true;
   withVscode.enable = true;
   withDiscord.enable = true;
   withSpotify.enable = true;
-  withPosting.enable = true;
   withObsidian.enable = true;
-  withYaak.enable = true;
 
   home.username = username;
   home.homeDirectory = homeDirectory;

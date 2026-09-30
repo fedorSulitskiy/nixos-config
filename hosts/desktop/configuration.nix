@@ -7,18 +7,15 @@
     ]
     ++ (import ../../modules);
 
-  withYazi.enable = true;
   withGo.enable = true;
   withJq.enable = true;
   withGit.enable = true;
   withFly.enable = true;
   withNode.enable = true;
   withRedis.enable = true;
-  withChrome.enable = true;
   withPython.enable = true;
   withOllama.enable = true;
   withOllama.cuda = true;
-  withPdfTopPm.enable = true;
   withRabbitMQ.enable = true;
   withPostgres17.enable = true;
   withGoMigrate.enable = true;
