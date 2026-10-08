@@ -23,4 +23,5 @@
   ./programs/discord.nix
   ./programs/dragon.nix
   ./programs/yaak.nix
+  ./programs/niri.nix
 ]

@@ -28,6 +28,6 @@
   ];
 
   soundOn.enable = true;
-  plasma.enable = true;
+  niri.enable = true;
   dualMonitors.enable = true;
 }

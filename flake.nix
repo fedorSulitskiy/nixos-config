@@ -11,6 +11,10 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     catppuccin.url = "github:catppuccin/nix/release-26.05";
     opencode-flake.url = "github:Hy4ri/opencode-flake";
     flyline.url = "github:HalFrgrd/flyline";
@@ -25,6 +29,7 @@
   outputs = {
     self,
     nixpkgs,
+    noctalia,
     home-manager,
     zen-browser,
     catppuccin,
@@ -45,6 +50,7 @@
           ./hosts/desktop/hardware-configuration.nix
 
           flyline.nixosModules.default
+          noctalia.nixosModules.default
 
           ({pkgs, ...}: {
             environment.systemPackages = [
@@ -63,14 +69,14 @@
             home-manager.users.fedor = import ./hosts/desktop/home.nix {
               username = "fedor";
               homeDirectory = "/home/fedor";
-              inherit nvimLocalSrc nvimGithubSrc;
+              inherit nvimLocalSrc nvimGithubSrc inputs;
             };
 
             # Root user configuration
             home-manager.users.root = import ./hosts/desktop/home.nix {
               username = "root";
               homeDirectory = "/root";
-              inherit nvimLocalSrc nvimGithubSrc;
+              inherit nvimLocalSrc nvimGithubSrc inputs;
             };
           }
         ];

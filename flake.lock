@@ -134,6 +134,26 @@
         "type": "github"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791048152,
+        "narHash": "sha256-R+cq28uDVDRY//7BjWXh/oKGv+yIrDsuFJJX9H41yEo=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "rev": "e639a87e811ad3268c73f6d5e77669c94184ba15",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "type": "github"
+      }
+    },
     "opencode-flake": {
       "inputs": {
         "nixpkgs": "nixpkgs_4"
@@ -159,6 +179,7 @@
         "home-manager": "home-manager",
         "neovim-config": "neovim-config",
         "nixpkgs": "nixpkgs_3",
+        "noctalia": "noctalia",
         "opencode-flake": "opencode-flake",
         "zen-browser": "zen-browser"
       }
