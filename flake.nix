@@ -40,6 +40,16 @@
     # Nvim config sources - both are always available
     nvimLocalSrc = /home/fedor/nixos-config/dotfiles/nvim;
     nvimGithubSrc = neovim-config;
+
+    # Zen upstream re-uploaded the 1.23.3b tarball; youwen5/zen-browser-flake
+    # still pins the old hash. Remove once upstream sources.json is fixed.
+    zenHash = "sha256-uyBF0+IWVNQP6EElAJLurf0sH8gx7vtQkiJ3PIvcoUk=";
+    mkZen = pkgs: let
+      z = zen-browser.packages.${pkgs.stdenv.hostPlatform.system};
+    in
+      z.default.override {
+        zen-browser-unwrapped = z.zen-browser-unwrapped.override {hash = zenHash;};
+      };
   in {
     nixosConfigurations = {
       nixos-btw = nixpkgs.lib.nixosSystem {
@@ -54,7 +64,7 @@
 
           ({pkgs, ...}: {
             environment.systemPackages = [
-              zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+              (mkZen pkgs)
               opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.opencode
             ];
           })
@@ -93,7 +103,7 @@
 
           ({pkgs, ...}: {
             environment.systemPackages = [
-              zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+              (mkZen pkgs)
               opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.opencode
             ];
           })
