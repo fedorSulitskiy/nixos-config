@@ -120,15 +120,15 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1794537146,
-        "narHash": "sha256-Wpz/7x/YWnDIBu7yj6ixe8j6fIMsidd9Y+o1PqPF3iM=",
-        "owner": "NixOS",
+        "lastModified": 1774709303,
+        "narHash": "sha256-D3Q07BbIA2KnTcSXIqqu9P586uWxN74zNoCH3h2ESHg=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d5cc6833999746cffdfe0598f7bc801a57b887a9",
+        "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
+        "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
@@ -159,15 +159,15 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1794958862,
-        "narHash": "sha256-V303dzTcXmvdGi3Z3erxiSMI8wDomgei3R7+/u5iOn0=",
-        "owner": "Hy4ri",
+        "lastModified": 1794979221,
+        "narHash": "sha256-vWs2KOmSQRWsowAX6GN0jg1HtnhXU74CDK+2JxJSyEA=",
+        "owner": "noblepayne",
         "repo": "opencode-flake",
-        "rev": "7593e3fae275048f30ef93e446e7b9b86ef455ef",
+        "rev": "eaaf3d85aed63e3cedcada2241f090abc5a05512",
         "type": "github"
       },
       "original": {
-        "owner": "Hy4ri",
+        "owner": "noblepayne",
         "repo": "opencode-flake",
         "type": "github"
       }

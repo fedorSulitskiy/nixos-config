@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix/release-26.05";
-    opencode-flake.url = "github:Hy4ri/opencode-flake";
+    opencode-flake.url = "github:noblepayne/opencode-flake";
     flyline.url = "github:HalFrgrd/flyline";
 
     # GitHub source for neovim config (pure builds)
@@ -57,7 +57,7 @@
           ({pkgs, ...}: {
             environment.systemPackages = [
               (mkZen pkgs)
-              opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.opencode
+              opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.opencode2-avx
             ];
           })
 
@@ -96,7 +96,7 @@
           ({pkgs, ...}: {
             environment.systemPackages = [
               (mkZen pkgs)
-              opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.opencode
+              opencode-flake.packages.${pkgs.stdenv.hostPlatform.system}.opencode2-avx
             ];
           })
 
