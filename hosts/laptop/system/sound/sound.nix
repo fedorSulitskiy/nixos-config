@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }: {
   options = {
@@ -30,7 +29,6 @@
       alsa.enable = true; # pipewire-alsa plugin → apps using alsa
       alsa.support32Bit = true; # 32-bit alsa libs for wine/steam
       pulse.enable = true; # pipewire-pulse → apps using pulseaudio
-      jack.enable = true; # pipewire-jack → jack clients
     };
   };
 }

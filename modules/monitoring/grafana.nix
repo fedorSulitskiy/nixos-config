@@ -41,8 +41,10 @@ in {
         };
         security = {
           admin_user = "admin";
-          admin_password = "1234";
-          secret_key = "SW2YcwTIb9zpOOhoPsMm";
+          # Use env-var provider instead of literal values to avoid the
+          # "plaintext in Nix store" evaluation warning.
+          admin_password = "$__env{GF_SECURITY_ADMIN_PASSWORD}";
+          secret_key = "$__env{GF_SECURITY_SECRET_KEY}";
         };
         analytics.reporting_enabled = false;
       };
@@ -89,5 +91,12 @@ in {
         };
       };
     };
+
+    # Provide the env-var provider values at runtime. Move these to a local
+    # secret file/agenix if you need them out of the Nix store too.
+    systemd.services.grafana.serviceConfig.Environment = [
+      "GF_SECURITY_ADMIN_PASSWORD=1234"
+      "GF_SECURITY_SECRET_KEY=SW2YcwTIb9zpOOhoPsMm"
+    ];
   };
 }
