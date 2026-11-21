@@ -10,52 +10,12 @@
   withGo.enable = true;
   withJq.enable = true;
   withGit.enable = true;
-  withFly.enable = true;
   withNode.enable = true;
-  withRedis.enable = true;
   withPython.enable = true;
-  withOllama.enable = true;
-  withOllama.cuda = true;
-  withRabbitMQ.enable = true;
-  withPostgres17.enable = true;
   withGoMigrate.enable = true;
   withNixSupport.enable = true;
-  withGcloud.enable = true;
 
   programs.flyline.enable = true;
-
-  # Monitoring suite
-  monitoring = {
-    grafana = {
-      enable = true;
-    };
-    prometheus.enable = true;
-    lokiServer.enable = true;
-    lokiClient = {
-      enable = true;
-      jobName = "local-logs";
-      serverAddress = "localhost";
-      serverPort = 3100;
-    };
-    tempoServer = {
-      enable = true;
-      port = 3200;
-    };
-    httpApi = [
-      {
-        name = "cron-api";
-        port = 8090;
-      }
-      {
-        name = "worker-api";
-        port = 8100;
-      }
-      {
-        name = "generic-api";
-        port = 8080;
-      }
-    ];
-  };
 
   nix.settings.experimental-features = [
     "nix-command"
