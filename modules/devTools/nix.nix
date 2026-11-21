@@ -13,6 +13,7 @@
     environment.systemPackages = with pkgs; [
       nixd
       nixfmt
+      nix-output-monitor
     ];
   };
 }

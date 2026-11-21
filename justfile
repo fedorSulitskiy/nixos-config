@@ -4,7 +4,7 @@ default:
 # Build & Switch an impure configuration
 [group("Build")]
 impure-rebuild-switch:
-	@sudo nixos-rebuild switch --impure
+	@sudo nixos-rebuild switch --impure |& nom
 
 # Build & Switch a pure configuration
 [group("Build")]
