@@ -35,4 +35,6 @@
     flavor = "mocha";
     accent = "dark";
   };
+
+  home.pointerCursor.enable = true;
 }
