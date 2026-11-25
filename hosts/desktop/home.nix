@@ -25,6 +25,7 @@
   withDiscord.enable = true;
   withSpotify.enable = true;
   withObsidian.enable = true;
+  withSteam.enable = true;
 
   programs.noctalia = {
     enable = true;
