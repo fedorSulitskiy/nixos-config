@@ -18,6 +18,7 @@
   ./devTools/pdf.nix
 
   ./qol/yazi.nix
+  ./qol/printing.nix
   ./qol/qtile-fix.nix
 
   ./monitoring/options.nix

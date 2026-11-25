@@ -14,6 +14,7 @@
   withPython.enable = true;
   withGoMigrate.enable = true;
   withNixSupport.enable = true;
+  withPrinting.enable = true;
 
   programs.flyline.enable = true;
 
